@@ -21,7 +21,7 @@ function App() {
         <nav className='navbar navbar-expand-lg navbar-light fixed-top'>
           <div className='container'>
             <Link className='navbar-brand' to={"/sign-in"}>
-              Wellness Scheduler
+              The Wellness Scheduler
             </Link>
             <div className='collapse navbar-collapse' id='navbarTogglerDemo02'>
               <ul className='navbar-nav ml-auto'>
@@ -47,7 +47,7 @@ function App() {
               <Route path='/sign-up' component={SignUp} />
               <Route exact path='/employer' component={EmployerHome} />
               <Route exact path='/employee' component={EmployeeHome} />
-              <Route exact path='/employee/healthchecker' component={HealthChecker} />
+              <Route path='/employee/healthchecker' component={HealthChecker} />
               <Route path='/employer/schedule' component={EmployerSchedule} />
               <Route path='/employee/schedule' component={EmployeeSchedule} />
               <Route path='/signout' component={Signout} />
