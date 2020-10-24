@@ -7,9 +7,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./components/login.component";
 import SignUp from "./components/signup.component";
 import Error from "./components/Error";
-import About from "./components/About";
-import Schedule from "./components/Schedule";
+import EmployerHome from "./components/EmployerHome";
+import EmployeeHome from "./components/EmployeeHome";
+import EmployerSchedule from "./components/EmployerSchedule";
+import EmployeeSchedule from "./components/EmployeeSchedule";
 import Signout from "./components/Signout";
+import HealthChecker from './components/HealthChecker';
 
 function App() {
   return (
@@ -42,8 +45,11 @@ function App() {
               <Route exact path='/' component={Login} />
               <Route path='/sign-in' component={Login} />
               <Route path='/sign-up' component={SignUp} />
-              <Route exact path='/employer' component={About} />
-              <Route path='/employer/schedule' component={Schedule} />
+              <Route exact path='/employer' component={EmployerHome} />
+              <Route exact path='/employee' component={EmployeeHome} />
+              <Route exact path='/employee/healthchecker' component={HealthChecker} />
+              <Route path='/employer/schedule' component={EmployerSchedule} />
+              <Route path='/employee/schedule' component={EmployeeSchedule} />
               <Route path='/signout' component={Signout} />
               <Route path='*' component={Error} />
             </Switch>

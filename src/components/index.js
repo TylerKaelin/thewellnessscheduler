@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Signin from './Signin';
 import Signup from './Signup';
 import Error from './Error';
-import About from './About';
-import Schedule from './Schedule';
+import EmployerHome from './EmployerHome';
+import EmployeeHome from './EmployeeHome';
+import EmployerSchedule from './EmployerSchedule';
+import EmployeeSchedule from './EmployeeSchedule';
 
 const ReactRouterSetup = () => {
   return (
@@ -17,11 +19,17 @@ const ReactRouterSetup = () => {
         <Route path='/Signup'>
           <Signup />
         </Route>
-        <Route path='/about'>
-          <About />
+        <Route path='/employer'>
+          <EmployerHome />
         </Route>
-        <Route path='/schedule'>
-          <Schedule />
+        <Route path='/employer/schedule'>
+          <EmployerSchedule />
+        </Route>
+        <Route path='/employee'>
+          <EmployeeHome />
+        </Route>
+        <Route path='/employee/schedule'>
+          <EmployeeSchedule />
         </Route>
         <Route path='*'>
           <Error />
