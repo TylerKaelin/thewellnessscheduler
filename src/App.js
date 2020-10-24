@@ -1,9 +1,10 @@
 import './App.css';
+import Home from './components'
 
 function App() {
   return (
     <div>
-      <h1>Wellness Scheduler</h1>
+      <Home />
     </div>
   );
 }
