@@ -1,12 +1,15 @@
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import "./components/about.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Login from "./components/login.component";
 import SignUp from "./components/signup.component";
 import Error from "./components/Error";
-
+import About from "./components/About";
+import Schedule from "./components/Schedule";
+import Signout from "./components/Signout";
 
 function App() {
   return (
@@ -39,6 +42,9 @@ function App() {
               <Route exact path='/' component={Login} />
               <Route path='/sign-in' component={Login} />
               <Route path='/sign-up' component={SignUp} />
+              <Route exact path='/employer' component={About} />
+              <Route path='/employer/schedule' component={Schedule} />
+              <Route path='/signout' component={Signout} />
               <Route path='*' component={Error} />
             </Switch>
           </div>
