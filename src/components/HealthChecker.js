@@ -1,50 +1,37 @@
-import React, {useState} from 'react'
+import React from 'react'
+import Navbar from './EmployeeNav'
 
-export default function HealthChecker() {
-    
-    const [isFatigued, setIsFatigued] = useState(false);
-    const [hasFever, setHasFever] = useState(false);
-    const [hasCough, setHasCough] = useState(false);
+const HealthChecker = () => {
+
         
-    return (
-        <form>
-            <h3>Sign In</h3>
+  return (
+    <form>
+      <Navbar />
+      <h3>Health Form</h3>
 
-            <div className='form-group'>
-          <p>Have you experienced any of the following symptoms in the past 48 hours?</p>
-        
-        <label>
-            Fever or Chills:
-            <input
-            name="hasFever"
-            type="checkbox"
-            onChange={setHasFever(true)}
-          />
-          </label>
+      <div className="form-group">
+        <p>
+          Have you experienced any of the following symptoms in the past 48
+          hours?
+        </p>
 
-          <br/>
+        <input name="hasFever" type="checkbox" />
+        <label>&nbsp; Fever or Chills</label>
 
-          <label>
-            Cough:
-            <input
-            name="hasCough"
-            type="checkbox"
-            onChange={setHasCough(true)}
-          />
-          </label>
+        <br />
 
-          <br/>
+        <input name="hasCough" type="checkbox" />
+        <label>&nbsp; Cough</label>
 
-          <label>
-            Fatigue:
-            <input
-            name="isFatigued"
-            type="checkbox"
-            onChange={setIsFatigued(true)}
-          />          
-          </label>
+        <br />
 
-        </div>
-        </form>
-    );
+        <input name="isFatigued" type="checkbox" />
+        <label>&nbsp; Fatigue</label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  );
 }
+
+export default HealthChecker;

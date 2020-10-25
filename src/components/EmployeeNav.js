@@ -5,14 +5,17 @@ const Navbar = () => {
     <nav>
       <ul>
         <li>
-          <Link to='/employee'>Employee Home Page</Link>
+          <Link to="/employee">Employee Home Page</Link>
         </li>
         <li>
-          <Link to='/employee/schedule'>Schedule</Link>
+          <Link to="/employee/schedule">Schedule</Link>
         </li>
-        {/* <li>
-          <Link to='/employee/healthchecker'>Health Checker</Link>
-        </li> */}
+        <li>
+          <Link to="/employee/healthchecker">Health Checker</Link>
+        </li>
+        <li>
+          <Link to="/employee/availability">Availability</Link>
+        </li>
       </ul>
     </nav>
   );

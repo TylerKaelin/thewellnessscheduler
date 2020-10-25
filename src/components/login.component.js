@@ -8,16 +8,16 @@ export default class Login extends Component {
         <h3>Sign In</h3>
 
         <div className='form-group'>
-          <label className='email-address-text'>Email address</label>
+          <label className='login-page-text'>Username</label>
           <input
-            type='email'
+            type='username'
             className='form-control'
-            placeholder='Enter email'
+            placeholder='Enter username'
           />
         </div>
 
         <div className='form-group'>
-          <label className='password-text'>Password</label>
+          <label className='login-page-text'>Password</label>
           <input
             type='password'
             className='form-control'
