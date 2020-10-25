@@ -9,9 +9,9 @@ export default function Schedule() {
       </div>
       <div>
         <Link to='/'>
-          <button>
-            Click here to go back to the sign in page
-          </button>
+          <text style={{color: "blue", borderRadius: "0.5rem"}}>
+            <u>Click here to go back to the sign in page</u>
+          </text>
         </Link>
       </div>
     </div>

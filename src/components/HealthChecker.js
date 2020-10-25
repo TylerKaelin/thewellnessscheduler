@@ -30,7 +30,7 @@ const HealthChecker = () => {
           <label>&nbsp; Fatigue</label>
         </div>
 
-        <button type="submit" style={{ backgroundColor: "blue", color: "white", borderRadius: '0.25em' }}>Submit</button>
+        <button type="submit" style={{ backgroundColor: "blue", color: "white", borderRadius: '0.5em' }}>Submit</button>
       </form>
     </div>
   );

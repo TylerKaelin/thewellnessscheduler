@@ -15,8 +15,11 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import ScheduleIcon from "@material-ui/icons/Schedule";
+import EventAvailableIcon from '@material-ui/icons/EventAvailable';
+import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+
 
 const drawerWidth = 240;
 
@@ -116,12 +119,6 @@ export default function MiniDrawer() {
           >
             <MenuIcon />
           </IconButton>
-            <span>
-            <h4 style={{textAlign: "center"}}>Employee Dashboard</h4>
-            <Link to='/signout'>
-              <button>Logout</button>
-            </Link>
-            </span>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -144,9 +141,19 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
-          {['Schedule', 'Availability', 'HealthChecker'].map((text, index) => (
+          {['Schedule', 'Availability', 'Health Checker', 'Logout'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>
+                {text === "Schedule" ? (
+                  <ScheduleIcon />
+                ) : text === "Availability" ? (
+                  <EventAvailableIcon />
+                ) : text === "Health Checker" ? (
+                  <LocalHospitalIcon />
+                ) : (
+                  <ExitToAppIcon />
+                )}
+              </ListItemIcon>
               <Link to={`/employee/${text}`}>
                 <ListItemText primary={text} />
               </Link>
