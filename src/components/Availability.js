@@ -6,7 +6,6 @@ const Availability = () => {
 
   return (
     <>
-      <Navbar />
       <form style={{ float: "left" }}>
         <h1>Normal Availability &nbsp;</h1>
         <div className="form-control" style={{ borderColor: "white" }}>
@@ -17,8 +16,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "limegreen",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -32,8 +31,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "limegreen",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -47,8 +46,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "limegreen",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -62,8 +61,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "limegreen",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -77,8 +76,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "limegreen",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -92,8 +91,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "limegreen",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -107,8 +106,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "limegreen",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -119,10 +118,10 @@ const Availability = () => {
           style={{
             backgroundColor: "limegreen",
             color: "white",
-            borderRadius: 5,
+            borderRadius: "12%",
             marginTop: "5.5%",
-            marginRight: '20%',
-            float: 'right'
+            marginRight: "20%",
+            float: "right",
           }}
         >
           Submit
@@ -138,8 +137,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "red",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -153,8 +152,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "red",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -168,8 +167,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "red",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -183,8 +182,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "red",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -198,8 +197,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "red",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -213,8 +212,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "red",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -228,8 +227,8 @@ const Availability = () => {
             name="hours"
             style={{
               borderColor: "red",
-              borderWidth: 1,
-              borderRadius: 5,
+              borderWidth: "1%",
+              borderRadius: "0.5em",
               float: "right",
             }}
             value={person.hours}
@@ -240,10 +239,10 @@ const Availability = () => {
           style={{
             backgroundColor: "red",
             color: "white",
-            borderRadius: 5,
+            borderRadius: "12%",
             marginTop: "3%",
-            marginRight: '12%',
-            float: 'right'
+            marginRight: "12%",
+            float: "right",
           }}
         >
           Submit

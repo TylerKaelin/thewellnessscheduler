@@ -98,7 +98,7 @@ export default function MiniDrawer() {
   };
 
   return (
-    <div className={classes.root}>
+    <div>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -119,9 +119,6 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
             <span>
-            {/* <Typography variant="h6" noWrap style={{ paddingLeft: "50%" }} >
-                Employer Dashboard                              
-            </Typography> */}
             <h4 style={{textAlign: "center"}}>Employer Dashboard</h4>
             <Link to='/signout'>
               <button>Logout</button>
@@ -157,10 +154,7 @@ export default function MiniDrawer() {
           ))}
         </List>
       </Drawer>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
         <Scheduler></Scheduler>
-      </main>
     </div>
   );
 }
