@@ -1,11 +1,22 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import logo from "./Images/logo.jpg";
 
 export default class Login extends Component {
   render() {
     return (
       <form>
-
+        <img
+          src={logo}
+          style={{
+            height: "20vh",
+            display: "block",
+            justifycontent: "center",
+            alignitems: "center",
+            margin: "auto",
+          }}
+          alt='Logo'
+        />
         <h3>Sign In</h3>
 
         <div className='form-group'>
@@ -43,7 +54,7 @@ export default class Login extends Component {
           <button type='submit' className='btn btn-primary btn-block'>
             Submit
           </button>
-        </Link> 
+        </Link>
       </form>
     );
   }

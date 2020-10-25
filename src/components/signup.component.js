@@ -1,10 +1,22 @@
 import React, { Component } from "react";
-import EmployerOrEmployeeButton from "./RadioButtonsForSignup"
+import EmployerOrEmployeeButton from "./RadioButtonsForSignup";
+import logo from "./Images/logo.jpg";
 
 export default class SignUp extends Component {
   render() {
     return (
       <form>
+        <img
+          src={logo}
+          style={{
+            height: "20vh",
+            display: "block",
+            justifycontent: "center",
+            alignitems: "center",
+            margin: "auto",
+          }}
+          alt='Logo'
+        />
         <h3>Sign Up</h3>
 
         <div className='form-group'>
@@ -47,7 +59,10 @@ export default class SignUp extends Component {
           Sign Up
         </button>
         <p className='forgot-password text-right'>
-          Already registered <a className='sign-in-text' href='/sign-in'>sign in?</a>
+          Already registered{" "}
+          <a className='sign-in-text' href='/sign-in'>
+            sign in?
+          </a>
         </p>
       </form>
     );
