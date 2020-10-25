@@ -1,11 +1,16 @@
 import React from 'react'
-import Navbar from "./EmployerNav"
+import Scheduler from "./CalendarComponent/App";
+import EmployerHomeDesign from "./EmployerHomeDesign";
 
 export default function Schedule() {
     return (
+      <div>
         <div>
-          <Navbar />
-            This is schedule.
+          <Scheduler></Scheduler>
         </div>
-    )
+        <div>
+          <EmployerHomeDesign></EmployerHomeDesign>
+        </div>
+      </div>
+    );
 }

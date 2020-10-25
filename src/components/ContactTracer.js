@@ -1,13 +1,12 @@
 import React from 'react'
-import Navbar from './EmployerNav'
+import EmployerHomeDesign from './EmployerHomeDesign'
 
 function ContactTracer() {
   return (
     <div>
-      <Navbar />
-      This is the Contact Tracer.
+      <EmployerHomeDesign></EmployerHomeDesign>
     </div>
-  )
+  );
 }
 
 export default ContactTracer

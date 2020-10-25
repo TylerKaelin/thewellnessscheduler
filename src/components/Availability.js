@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import Navbar from './EmployeeNav'
+import EmployeeHomeDesign from "./EmployeeHomeDesign";
 
 const Availability = () => {
   const person = useState({ hours: "" });
 
   return (
     <>
+      <div>
+        <EmployeeHomeDesign></EmployeeHomeDesign>
+      </div>
       <form style={{ float: "left" }}>
         <h1>Normal Availability &nbsp;</h1>
         <div className="form-control" style={{ borderColor: "white" }}>

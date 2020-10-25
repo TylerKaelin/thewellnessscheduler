@@ -7,7 +7,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -18,7 +17,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import Scheduler from './CalendarComponent/App'
 
 const drawerWidth = 240;
 
@@ -146,15 +144,16 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
-          {['Schedule', 'Employees', 'Contact Tracer'].map((text, index) => (
+          {['Schedule', 'Employees', 'ContactTracer'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+              <Link to={`/employer/${text}`}>
+                <ListItemText primary={text} />
+              </Link>              
             </ListItem>
           ))}
         </List>
       </Drawer>
-        <Scheduler></Scheduler>
     </div>
   );
 }

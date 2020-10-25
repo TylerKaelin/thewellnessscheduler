@@ -11,8 +11,9 @@ import EmployerHome from "./components/EmployerHome";
 import EmployeeHome from "./components/EmployeeHome";
 import ContactTracer from "./components/ContactTracer";
 import HealthChecker from "./components/HealthChecker";
-import EmployerSchedule from "./components/EmployerSchedule";
 import EmployeeSchedule from "./components/EmployeeSchedule";
+import EmployerSchedule from "./components/EmployerSchedule";
+import Employees from "./components/EmployeePage";
 import Availability from "./components/Availability";
 import Signout from "./components/Signout";
 
@@ -51,14 +52,14 @@ function App() {
               <Route exact path='/employee' component={EmployeeHome} />
               <Route
                 exact
-                path='/employer/contact-tracer'
+                path='/employer/ContactTracer'
                 component={ContactTracer}
               />
-              <Route path='/employee/healthchecker' component={HealthChecker} />
-              <Route path='/employer/schedule' component={EmployerSchedule} />
-              <Route path='/employee/schedule' component={EmployeeSchedule} />
-              <Route path='/employer/tracer' component={ContactTracer} />
-              <Route path='/employee/availability' component={Availability} />
+              <Route path='/employee/Healthchecker' component={HealthChecker} />
+              <Route path='/employee/Schedule' component={EmployeeSchedule} />
+              <Route path='/employer/Schedule' component={EmployerSchedule} />
+              <Route path='/employee/Availability' component={Availability} />
+              <Route path='/employer/Employees' component={Employees} />
               <Route path='/signout' component={Signout} />
               <Route path='*' component={Error} />
             </Switch>

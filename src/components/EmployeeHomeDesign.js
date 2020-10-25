@@ -7,7 +7,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -118,9 +117,6 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
             <span>
-            {/* <Typography variant="h6" noWrap style={{ paddingLeft: "50%" }} >
-                Employer Dashboard                              
-            </Typography> */}
             <h4 style={{textAlign: "center"}}>Employee Dashboard</h4>
             <Link to='/signout'>
               <button>Logout</button>
@@ -148,23 +144,16 @@ export default function MiniDrawer() {
         </div>
         <Divider />
         <List>
-          {['Schedule', 'Avalibility', 'Health Questionaire'].map((text, index) => (
+          {['Schedule', 'Availability', 'HealthChecker'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+              <Link to={`/employee/${text}`}>
+                <ListItemText primary={text} />
+              </Link>
             </ListItem>
           ))}
         </List>
       </Drawer>
-      <main className={classes.content}>
-        <div className={classes.toolbar} />
-        <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-          facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-          gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-        </Typography>
-      </main>
     </div>
   );
 }

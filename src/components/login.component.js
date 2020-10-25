@@ -38,7 +38,7 @@ export default class Login extends Component {
           </div>
         </div>
 
-        <Link to='/employer'>
+        <Link to='/employer/Schedule'>
           <button type='submit' className='btn btn-primary btn-block'>
             Submit
           </button>
