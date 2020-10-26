@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# The Wellness Scheduler Application
+During the pandemic many large and small businesses are faced with the challenge of keeping their employees both safe and accomodating their possibly rapidingly changing schedules in the event that they are sick or get covid-19 in order to continue serving their customers. Thus, our team, The Truman Cyberdogs decided to create an application that allows for businesses to much more easily protect and accomodate their rapidly changing work force. This application features things like a contact tracer, so that managers are able to easily see what other employees an employee came into contact with in the last two weeks, as well as a scheduler that reccomends which employees to replace an employees shifts with in the event that they get sick, and many more. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installation Process
+To install this code, use the "clone" function on the "code" tab, and in a terminal do
+```bash
+git clone https://github.com/TylerKaelin/thewellnessscheduler.git
+```
+to get the full code. 
 
-## Available Scripts
+This app uses different packages. Using a package manager like npm
+```bash
+npm i
+```
+```
+Then once the packages are installed, just run
+```bash
+npm start
+```
+and the application will start up on a local server.
 
-In the project directory, you can run:
+## Usage
+Since this is a full stack application, it is deployed on Heroku. Things you can do on this app include creating a login (as either an employer or employee), setting up a schedule, setting up availability, as well as more depending on your role choice. These separate pages include a dashboard which allow users to navigate their different pages to perform different functionalities.
 
-### `npm start`
+## Tutorial
+### Sign In
+The first page you will see is the Sign In page. This page is where you will enter your email and password to login. The login will then take you to either the Employer or Employee homepage depending on what you signed up as.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Sign Up
+If you don't have an account stored, here is where you will make your profile. You can enter your first and last name, as well as a username, and password. Then after the information is entered, you will choose whether you are an employer or employee and be directored to the appropriate dashboard to manage your work schedule, fill out your daily health form, and etc.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Employer
+#### Schedule
+The first page you will see if you login as an employer is the schedule page. This shows the schedule of all employees. As an employer, you can add times when your employees  work based on their availability, which is stored in the employees page. To navigate to the other pages, click the hamburger icon in the top left to open up the dashboard, and each field links you to a different page. The schedule also provides reccomendations for which employee could possibly replace another in the event that an employee gets sick.
 
-### `npm test`
+#### Employees
+This page will list the current employees within the company, specifically their first name, last name, username, their work availability (both normal availability and sick availability). This specific information was choosen so that the employer could use it to create the work schedule. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Contact Tracer
+Here is a page that will show the employees that worked in the last two weeks and came into in contact with other employees. You can search for an employee name, and it will bring up the list of other employees that were in contact with that employee based on their schedules. This feature is especially important because of covid-19 and other sicknesses employees may come into contact with.
 
-### `npm run build`
+### Employee
+#### Schedule
+This will be the first page when you login as an employee. It is essentially the same schedule page as the employer schedule page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Availability
+This page is where an employee can input their normal availability and their "sick" availability, which is essentially that employee's back-up availability which an employer can use to fill shifts in the event that an employee gets sick.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Health Checker
+This page is a small questionarre for an employee to fill out that gives indication of the COVID-19 virus or other sicknesses. Submitting this daily will inform the employer of the health status of that employee.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Logout
+If you click the logout link on the dashboard (in both the employer and employee pages), then it will log you out of the application.
 
-### `npm run eject`
+## Contributions
+This app was developed specifically for the KC Federal Reserve Code-a-thon, so contributions are not accepted as of now. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Authors (Contributors)
+Authors of this app include Tyler Kaelin, Deepson Shrestha, Logan Morris
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## License
+MIT License
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Copyright (c) 2020 The Wellness Scheduler
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-## Learn More
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Support
+Email contact for help with the app is tylerkaelin18@icloud.com
