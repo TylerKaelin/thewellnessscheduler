@@ -1,35 +1,32 @@
 import React, { Component } from "react";
 import EmployerOrEmployeeButton from "./RadioButtonsForSignup";
 
-
-
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '' ,
-      username: '',
-      password: ''
+      firstName: "",
+      lastName: "",
+      username: "",
+      password: "",
+      employeeOrEmployer: "",
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
-  
-  // state = {
-  //   firstName: '',
-  //   lastName: '',
-  //   userName: '',
-  //   password: ''
-  // };
+
+  callbackFunction = (childData) => {
+    this.setState({ employeeOrEmployer: childData });
+    console.log(this.state.employeeOrEmployer);
+  };
 
   handleChange = (event) => {
     const key = event.target.name;
     const value = event.target.value;
 
-    console.log(event.target.value);
+    console.log(`${key}:${value}`);
     this.setState({ [key]: [value] });
-  }
+  };
 
   render() {
     return (
@@ -49,7 +46,13 @@ export default class SignUp extends Component {
 
         <div className='form-group'>
           <label className='sign-up-page-text'>Last name</label>
-          <input type='text' className='form-control' placeholder='Last name' name='lastName' onChange={(event) => this.handleChange(event)}/>
+          <input
+            type='text'
+            className='form-control'
+            placeholder='Last name'
+            name='lastName'
+            onChange={(event) => this.handleChange(event)}
+          />
         </div>
 
         <div className='form-group'>
@@ -75,7 +78,9 @@ export default class SignUp extends Component {
         </div>
 
         <div>
-          <EmployerOrEmployeeButton></EmployerOrEmployeeButton>
+          <EmployerOrEmployeeButton
+            parentCallback={this.callbackFunction}
+          ></EmployerOrEmployeeButton>
         </div>
 
         <button type='submit' className='btn btn-primary btn-block'>
