@@ -1,22 +1,29 @@
 import React, { Component } from "react";
 import EmployerOrEmployeeButton from "./RadioButtonsForSignup";
-import logo from "./Images/logo.jpg";
+
+
 
 export default class SignUp extends Component {
+  state = {
+    firstName: '',
+    lastName: '',
+    userName: '',
+    password: ''
+  };
+
+  handleFirstNameChange = (input) => {
+    this.state.firstName = input;
+    console.log(this.state.firstName);
+  };
+
+  handleLastNameChange = (input) => {
+    this.state.lastName = input;
+    console.log(this.state.lastName);
+  };
+
   render() {
     return (
       <form>
-        <img
-          src={logo}
-          style={{
-            height: "20vh",
-            display: "block",
-            justifycontent: "center",
-            alignitems: "center",
-            margin: "auto",
-          }}
-          alt='Logo'
-        />
         <h3>Sign Up</h3>
 
         <div className='form-group'>
@@ -25,12 +32,13 @@ export default class SignUp extends Component {
             type='text'
             className='form-control'
             placeholder='First name'
+            onChange={(event) => this.handleFirstNameChange(event.target.value)}
           />
         </div>
 
         <div className='form-group'>
           <label className='sign-up-page-text'>Last name</label>
-          <input type='text' className='form-control' placeholder='Last name' />
+          <input type='text' className='form-control' placeholder='Last name' onChange={(event) => this.handlelastNameChange(event.target.value)}/>
         </div>
 
         <div className='form-group'>

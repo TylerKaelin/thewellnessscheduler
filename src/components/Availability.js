@@ -20,7 +20,7 @@ const Availability = () => {
               name="hours"
               placeholder="e.g. 9:00am-5:00pm"
               style={{
-                borderColor: "limegreen",
+                borderColor: "skyblue",
                 borderWidth: "1%",
                 borderRadius: "0.5em",
               }}
@@ -29,7 +29,7 @@ const Availability = () => {
             <button
               type="submit"
               style={{
-                backgroundColor: "limegreen",
+                backgroundColor: "skyblue",
                 color: "white",
                 borderRadius: "0.5em",
                 marginLeft: "2%"
@@ -40,7 +40,7 @@ const Availability = () => {
           </div>
         </form>
       </div>
-      <div>
+      <div style={{marginTop: "5%"}}>
         <form>
           <h1>Sick Availability</h1>
           <div className="form-control" style={{ borderColor: "white" }}>
@@ -51,7 +51,7 @@ const Availability = () => {
               name="hours"
               placeholder="e.g. 12:00pm-3:00pm"
               style={{
-                borderColor: "red",
+                borderColor: "blue",
                 borderWidth: "1%",
                 borderRadius: "0.5em",
               }}
@@ -60,7 +60,7 @@ const Availability = () => {
             <button
               type="submit"
               style={{
-                backgroundColor: "red",
+                backgroundColor: "blue",
                 color: "white",
                 borderRadius: "0.5em",
                 marginLeft: "2%",
