@@ -29,7 +29,6 @@ export default class SignUp extends Component {
     return (
       <form>
         <h3>Sign Up</h3>
-
         <div className='form-group'>
           <label className='sign-up-page-text'>First name</label>
           <input

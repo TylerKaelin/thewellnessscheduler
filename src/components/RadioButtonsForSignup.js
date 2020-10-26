@@ -9,13 +9,14 @@ export default class RadioButtonsGroup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      employeeOrEmployer: "",
+      employeeOrEmployer: "employee",
     };
 
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange = (event) => {
+    console.log(this.state);
     this.setState({ employeeOrEmployer: event.target.value });
     this.sendData();
   };
@@ -38,12 +39,12 @@ export default class RadioButtonsGroup extends Component {
             <FormControlLabel
               value='Employee'
               control={<Radio />}
-              label='Employee'
+              label='Employer'
             />
             <FormControlLabel
               value='Employer'
               control={<Radio />}
-              label='Employer'
+              label='Employee'
             />
           </span>
         </RadioGroup>
