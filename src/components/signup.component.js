@@ -4,22 +4,32 @@ import EmployerOrEmployeeButton from "./RadioButtonsForSignup";
 
 
 export default class SignUp extends Component {
-  state = {
-    firstName: '',
-    lastName: '',
-    userName: '',
-    password: ''
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: '',
+      lastName: '' ,
+      username: '',
+      password: ''
+    };
 
-  handleFirstNameChange = (input) => {
-    this.state.firstName = input;
-    console.log(this.state.firstName);
-  };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  
+  // state = {
+  //   firstName: '',
+  //   lastName: '',
+  //   userName: '',
+  //   password: ''
+  // };
 
-  handleLastNameChange = (input) => {
-    this.state.lastName = input;
-    console.log(this.state.lastName);
-  };
+  handleChange = (event) => {
+    const key = event.target.name;
+    const value = event.target.value;
+
+    console.log(event.target.value);
+    this.setState({ [key]: [value] });
+  }
 
   render() {
     return (
@@ -32,13 +42,14 @@ export default class SignUp extends Component {
             type='text'
             className='form-control'
             placeholder='First name'
-            onChange={(event) => this.handleFirstNameChange(event.target.value)}
+            name='firstName'
+            onChange={(event) => this.handleChange(event)}
           />
         </div>
 
         <div className='form-group'>
           <label className='sign-up-page-text'>Last name</label>
-          <input type='text' className='form-control' placeholder='Last name' onChange={(event) => this.handlelastNameChange(event.target.value)}/>
+          <input type='text' className='form-control' placeholder='Last name' name='lastName' onChange={(event) => this.handleChange(event)}/>
         </div>
 
         <div className='form-group'>
@@ -47,6 +58,8 @@ export default class SignUp extends Component {
             type='username'
             className='form-control'
             placeholder='Enter username'
+            name='username'
+            onChange={(event) => this.handleChange(event)}
           />
         </div>
 
@@ -56,6 +69,8 @@ export default class SignUp extends Component {
             type='password'
             className='form-control'
             placeholder='Enter password'
+            name='password'
+            onChange={(event) => this.handleChange(event)}
           />
         </div>
 
