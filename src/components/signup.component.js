@@ -9,7 +9,7 @@ export default class SignUp extends Component {
       lastName: "",
       username: "",
       password: "",
-      employeeOrEmployer: "",
+      employeeOrEmployer: "Employer",
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -17,14 +17,11 @@ export default class SignUp extends Component {
 
   callbackFunction = (childData) => {
     this.setState({ employeeOrEmployer: childData });
-    console.log(this.state.employeeOrEmployer);
   };
 
   handleChange = (event) => {
     const key = event.target.name;
     const value = event.target.value;
-
-    console.log(`${key}:${value}`);
     this.setState({ [key]: [value] });
   };
 

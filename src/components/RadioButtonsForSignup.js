@@ -17,11 +17,12 @@ export default class RadioButtonsGroup extends Component {
 
   handleChange = (event) => {
     this.setState({ employeeOrEmployer: event.target.value });
-    console.log(this.state.employeeOrEmployer);
+    this.sendData();
   };
 
   sendData = () => {
-    this.props.parentCallback(this.state.employeeOrEmployer);
+    const to_send = this.state.employeeOrEmployer || "Employee";
+    this.props.parentCallback(to_send);
   };
 
   render() {
@@ -31,6 +32,7 @@ export default class RadioButtonsGroup extends Component {
           aria-label='gender'
           name='gender1'
           onChange={(event) => this.handleChange(event)}
+          defaultValue='Employee'
         >
           <span>
             <FormControlLabel
